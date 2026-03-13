@@ -6,7 +6,7 @@ services:
     build:
       context: ./.docker/nginx
       dockerfile: Dockerfile
-    image: frehman/nginximages:${BUILD_NUMBER}
+    image: mudassarnaseer/nginximages:${BUILD_NUMBER}
     ports:
       - "80:80"
     volumes:
@@ -19,7 +19,7 @@ services:
     build:
       context: ./.docker/php
       dockerfile: Dockerfile
-    image: frehman/phpimages:${BUILD_NUMBER}
+    image: mudassarnaseer/phpimages:${BUILD_NUMBER}
     working_dir: /var/www/php
     volumes:
       - ./src:/var/www/php
@@ -30,7 +30,7 @@ services:
     build:
       context: ./.docker/mysql
       dockerfile: Dockerfile
-    image: frehman/mysqlimages:${BUILD_NUMBER}
+    image: mudassarnaseer/mysqlimages:${BUILD_NUMBER}
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_ROOT_HOST: "%"
@@ -47,7 +47,7 @@ services:
     build:
       context: ./.docker/phpmyadmin
       dockerfile: Dockerfile
-    image: frehman/phpmyadminimages:${BUILD_NUMBER}
+    image: mudassarnaseer/phpmyadminimages:${BUILD_NUMBER}
     environment:
       MYSQL_USERNAME: root
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
