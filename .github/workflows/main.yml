@@ -1,4 +1,4 @@
-name: LEMP Server CI/CD
+name: LEMP Server CI/CD 
 
 on:
   push:
